@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
+    <persistence-unit name="unit-test">
+        <!--<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>-->
+        <!--TEN PROVIDER NIE WSPIERA MAPOWANIA NA SESIE HB -->
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>entity.persistence.Person</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5433/bookstore?currentSchema=public"/>
+            <property name="javax.persistence.jdbc.user" value="postgres"/>
+            <property name="javax.persistence.jdbc.password" value="admin"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>

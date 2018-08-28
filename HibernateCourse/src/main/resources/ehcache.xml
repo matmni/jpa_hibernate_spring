@@ -1,0 +1,6 @@
+<ehcahe>
+    <cache name="myCache"
+           maxBytesLocalHeap="50m"
+           timeToLiveSeconds="100">
+    </cache>
+</ehcahe>
